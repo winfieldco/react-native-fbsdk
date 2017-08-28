@@ -144,6 +144,11 @@ public class FBLoginManagerModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void logInWithReadPermissions(ReadableArray permissions, final Promise promise) {
         final LoginManager loginManager = LoginManager.getInstance();
+
+        // Initially logout to prevent 403 error
+        // https://stackoverflow.com/questions/32663382/facebook-login-issue-canopenurl-failed-for-url-fbauth2-error-null
+        loginManager.logOut();
+
         loginManager.registerCallback(mCallbackManager, new LoginManagerCallback(promise));
         Activity activity = getCurrentActivity();
         if (activity != null) {
@@ -162,6 +167,11 @@ public class FBLoginManagerModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void logInWithPublishPermissions(ReadableArray permissions, final Promise promise) {
         final LoginManager loginManager = LoginManager.getInstance();
+
+        // Initially logout to prevent 403 error
+        // https://stackoverflow.com/questions/32663382/facebook-login-issue-canopenurl-failed-for-url-fbauth2-error-null
+        loginManager.logOut();
+        
         loginManager.registerCallback(mCallbackManager, new LoginManagerCallback(promise));
         Activity activity = getCurrentActivity();
         if (activity != null) {
