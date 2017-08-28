@@ -99,6 +99,11 @@ RCT_EXPORT_METHOD(logOut)
       resolve(RCTBuildResultDictionary(result));
     }
   };
+
+  // Initially logout or can have error 304 due to changing the logged in user
+  // https://stackoverflow.com/questions/29408299/ios-facebook-sdk-4-0-login-error-code-304
+  [_loginManager logOut];  
+
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
   if (isRead) {
