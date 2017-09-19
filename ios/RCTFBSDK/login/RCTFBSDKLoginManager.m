@@ -40,6 +40,11 @@ RCT_EXPORT_MODULE(FBLoginManager);
 {
   if ((self = [super init])) {
     _loginManager = [[FBSDKLoginManager alloc] init];
+
+    // XXX Displaying blank white screen in some cases, potentially trying to open the fb app itself, always force to use web to resolve
+    // https://stackoverflow.com/questions/39532132/blank-page-while-logging-in-with-facebook-sdk-on-ios-10
+    _loginManager.loginBehavior = FBSDKLoginBehaviorWeb;
+        
   }
   return self;
 }
