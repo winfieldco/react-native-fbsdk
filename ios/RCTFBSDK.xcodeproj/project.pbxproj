@@ -370,9 +370,10 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(SRCROOT)/../../react/**",
-					"${SRCROOT}/../../react-native/React/**",
-					"${SRCROOT}/../../../ios/**",
+					"${SRCROOT}/../../../ios/Pods/FBSDKShareKit/FBSDKShareKit/**",
+					"${SRCROOT}/../../../ios/Pods/FBSDKLoginKit/FBSDKLoginKit/**",
+					"${SRCROOT}/../../../ios/Pods/FBSDKCoreKit/FBSDKCoreKit/**",
+					"${SRCROOT}/../../../ios/Pods/Headers/Public/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-ObjC";
@@ -393,9 +394,10 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(SRCROOT)/../../react/**",
-					"${SRCROOT}/../../react-native/React/**",
-					"${SRCROOT}/../../../ios/**",
+					"${SRCROOT}/../../../ios/Pods/FBSDKShareKit/FBSDKShareKit/**",
+					"${SRCROOT}/../../../ios/Pods/FBSDKLoginKit/FBSDKLoginKit/**",
+					"${SRCROOT}/../../../ios/Pods/FBSDKCoreKit/FBSDKCoreKit/**",
+					"${SRCROOT}/../../../ios/Pods/Headers/Public/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-ObjC";
